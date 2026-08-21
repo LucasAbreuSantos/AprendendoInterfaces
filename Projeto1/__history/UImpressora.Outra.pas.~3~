@@ -1,0 +1,23 @@
+unit UImpressora.Outra;
+
+interface
+
+Uses
+  UImpressora.Interfaces, Vcl.Dialogs;
+
+Type
+  TImpressoraOutra = Class(TInterfacedObject, IImpressora)
+  public
+    procedure Imprimir(const Mensagem : String);
+  End;
+
+implementation
+
+{ TImpressoraOutra }
+
+procedure TImpressoraOutra.Imprimir(const Mensagem: String);
+begin
+  ShowMessage('Outra: ' + Mensagem);
+end;
+
+end.

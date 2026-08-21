@@ -1,0 +1,32 @@
+unit UBalanca.Factory;
+
+interface
+
+uses UBalanca.Interfaces, System.SysUtils;
+
+Type
+  TBalancaFactory = class
+    class function CriarBalanca(const tipo : string) : IBalanca;
+  end;
+
+implementation
+
+uses UBalanca.Carga;
+
+{ TBalancaFactory }
+
+class function TBalancaFactory.CriarBalanca(const tipo: string): IBalanca;
+begin
+  case tipo.tolower of
+   'Balanca de carga' :
+    Begin
+     Result := TBalancaCarga.Create
+    End
+    Else
+    Begin
+      raise Exception.Create('Balança invalida');
+    End;
+  end;
+end;
+
+end.

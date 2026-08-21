@@ -1,0 +1,13 @@
+unit UImpressora.Interfaces;
+
+interface
+
+Type
+   IImpressora = interface
+     ['{5B384CEB-C308-445F-AC25-6220F0FFCCCB}']
+     procedure Imprimir(const Mensagem : String);
+   end;
+
+implementation
+
+end.

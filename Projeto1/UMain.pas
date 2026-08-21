@@ -1,0 +1,37 @@
+unit UMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TFrmMain = class(TForm)
+    BitBtn1: TBitBtn;
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmMain: TFrmMain;
+
+implementation
+
+{$R *.dfm}
+
+uses UImpressora.Factory, UImpressora.Interfaces;
+
+procedure TFrmMain.BitBtn1Click(Sender: TObject);
+var
+  Impressora : IImpressora;
+begin
+  Impressora := TImpressoraFactory.CriarObjeto('OuTRA');
+  Impressora.Imprimir('Teste');
+  ShowMessage(IntToStr(Impressora.Soma(15,12)));
+end;
+
+end.

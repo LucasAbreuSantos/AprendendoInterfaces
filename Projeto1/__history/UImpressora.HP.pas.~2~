@@ -1,0 +1,16 @@
+unit UImpressora.HP;
+
+interface
+
+uses
+  UImpressora.Interfaces;
+
+Type
+  UImpressoraHP = class(TInterfacedObject, IImpressora)
+  public
+     procedure Imprimir(const Mensagem : String);
+  end;
+
+implementation
+
+end.

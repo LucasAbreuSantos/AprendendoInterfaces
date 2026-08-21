@@ -1,0 +1,20 @@
+unit UBalanca.Mercado;
+
+interface
+
+uses UBalanca.interfaces, VCL.Dialogs, System.SysUtils;
+
+Type TBalancaMercado = class(TInterfacedObject, IBalanca)
+      procedure CalcularPeso(const Peso : string);
+end;
+
+implementation
+
+{ TBalancaMercado }
+
+procedure TBalancaMercado.CalcularPeso(const Peso: string);
+begin
+   ShowMessage(Format('Peso: %s - Balança Mercado', [Peso]));
+end;
+
+end.

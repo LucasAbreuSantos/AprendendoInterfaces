@@ -1,0 +1,12 @@
+unit UBalanca.Factory;
+
+interface
+
+Type
+  TBalancaFactory = class
+
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,20 @@
+unit UBalanca.Carga;
+
+interface
+
+uses UBalanca.interfaces, VCL.Dialogs, System.SysUtils;
+
+type  TBalancaCarga = class(TInterfacedObject, IBalanca)
+        procedure CalcularPeso(const Peso : string);
+      end;
+
+implementation
+
+{ UBalancaCarga }
+
+procedure TBalancaCarga.CalcularPeso(const Peso: string);
+begin
+  ShowMessage(Format('Peso: %s - Balança de Carga', [Peso]));
+end;
+
+end.

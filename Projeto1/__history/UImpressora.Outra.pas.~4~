@@ -1,0 +1,29 @@
+unit UImpressora.Outra;
+
+interface
+
+Uses
+  UImpressora.Interfaces, Vcl.Dialogs;
+
+Type
+  TImpressoraOutra = Class(TInterfacedObject, IImpressora)
+  public
+    procedure Imprimir(const Mensagem : String);
+    function Soma(valor1,Valor2 : integer): integer;
+  End;
+
+implementation
+
+{ TImpressoraOutra }
+
+procedure TImpressoraOutra.Imprimir(const Mensagem: String);
+begin
+  ShowMessage('Outra: ' + Mensagem);
+end;
+
+function TImpressoraOutra.Soma(valor1, Valor2: integer): integer;
+begin
+  Exit;
+end;
+
+end.

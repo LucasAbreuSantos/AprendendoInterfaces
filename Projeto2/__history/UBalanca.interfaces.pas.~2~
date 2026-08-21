@@ -1,0 +1,12 @@
+unit UBalanca.interfaces;
+
+interface
+
+Type IBalanca = interface
+      ['{D56BD435-4F92-44DD-B360-333ACC8E5EEB}']
+      procedure CalcularPeso(const Peso : integer);
+     end;
+
+implementation
+
+end.
